@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-scream
+spec:
+  selector:
+    matchLabels:
+      app: log-scream
+  template:
+    metadata:
+      labels:
+        app: log-scream
+    spec:
+      containers:
+      - name: log-scream
+        image: vojtechmares/log-scream
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        env:
+          - name: INTERVAL
+            value: "2000" # How often to scream in milliseconds
