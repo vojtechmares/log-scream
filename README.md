@@ -10,3 +10,4 @@ docker run vojtechmares/log-scream
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/vojtechmares/log-scream/main/k8s/deployment.yml
+```
