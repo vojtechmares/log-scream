@@ -7,7 +7,7 @@ COPY go.mod .
 
 ENV CGO_ENABLED=0
 
-RUN go build -a -ldflags \
+RUN go build -a -o scream -ldflags \
   '-extldflags "-static"'
 
 FROM scratch
